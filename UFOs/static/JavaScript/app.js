@@ -25,5 +25,26 @@ data.forEach((dataRow) =>{
 });
 }
 
+function handleClick(){
+    let date= d3.select("#datetime").property("value");
+    let filteredData= tableData;
+    
+    // psuedocode practice
+    // if (a date is entere){
+        // Filter the default data to show only the date entered
+    // }
+    if (date){
+        filterData= filteredData.filter(row => row.datetime === date);
+    };
+    // Rebuld the table using the filtered data
+    buildTable(filteredData);
+
+    // Attach an event to listen for the form button
+    d3.selectAll("filter-btn").on("click", handleClick);
+
+    // Build the table when the page loads
+    buildTable(tableData);
+
+};
 
 
