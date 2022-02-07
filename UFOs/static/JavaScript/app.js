@@ -18,7 +18,7 @@ function buildTable(data){
     // each value as a table cell (td)
     Object.values(dataRow).forEach((val)=> {
         let cell= row.append("td");
-        cell.text(val);
+        cell.text(val); 
     });
  });
 }
