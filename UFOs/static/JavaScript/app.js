@@ -23,6 +23,7 @@ function buildTable(data){
  });
 }
 
+
 function handleClick(){
     let date= d3.select("#datetime").property("value");
     let filteredData= tableData;
@@ -32,8 +33,8 @@ function handleClick(){
         // Filter the default data to show only the date entered
     // }
     if (date){
-        filterData= filteredData.filter(row => row.datetime === date);
-    };
+        filteredData= filteredData.filter(row => row.datetime === date);
+    }
     // Rebuld the table using the filtered data
     buildTable(filteredData);
 
